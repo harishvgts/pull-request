@@ -1,0 +1,16 @@
+name: testing pull
+
+on:
+  push:
+    branches: [ branch ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+     - uses: actions/checkout@v2
+
+      # Make changes to pull request here
+
+     - name: Create Pull Request
+       uses: peter-evans/create-pull-request@v3
